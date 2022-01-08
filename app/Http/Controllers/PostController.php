@@ -18,9 +18,7 @@ class PostController extends Controller
 {
 
     /**
-     * Constructor
-     * أنا أضفته مشان اعمل عليه 
-     * middleware
+     * Constructor  
      */
     public function __construct(){
         $this->middleware('auth')->except('show', 'index', 'search', 'getPostsForCategory');     
