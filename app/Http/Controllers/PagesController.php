@@ -45,7 +45,7 @@ class PagesController extends Controller
             $data = array(
                 'name' => $request->name,
                 'email' => $request->email,
-                'bodyMessage' => $request->message           // كلمة message محجوزة
+                'bodyMessage' => $request->message         
             );
             Mail::send('emails.contact', $data, function($message) use($data){
                 $message->from($data['email']);

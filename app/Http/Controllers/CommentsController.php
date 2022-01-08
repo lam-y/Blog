@@ -73,10 +73,9 @@ class CommentsController extends Controller
         $comment->comment = $request->comment;
         $comment->approved = false;              // حالياً رح نحفظ أي تعليق بدون موافقة الادمن
 
-        // رح نجيب البوست من قاعدة البيانات مشان نربط التعليق معه
         $post = Post::find($post_id);
 
-        $comment->post()->associate($post);         // هادا الـ post هو اللي كتبناه بمودل comment
+        $comment->post()->associate($post);        
 
         $comment->save();
 
